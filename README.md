@@ -9,7 +9,7 @@ Este blog foi desenvolvido durante a participação do processo seleletivo da em
 Insira um gif ou um link de alguma demonstração
 
 
-Você pode ter acesso ao deploy do projeto [Clicando aqui](https://exemplo.com/)
+Você pode ter acesso ao deploy do projeto [Clicando aqui](https://dougsaint.github.io/alkabot/)
 
 
 
