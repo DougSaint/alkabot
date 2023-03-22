@@ -35,7 +35,7 @@ export default function ListPosts({ page }) {
           <Loader />
         </div>
       )}
-      {!posts && (
+      {!posts && !loading && (
         <p className="text-slate-800 dark:text-white text-xl text-center">
           Algo deu errado
         </p>
