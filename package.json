@@ -1,8 +1,8 @@
 {
   "name": "alkabot",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
-  "homepage": "https://dougsaint.github.io/alkabot",
+  "homepage": "https://dougsaint.github.io/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

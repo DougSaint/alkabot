@@ -6,9 +6,11 @@ import { Home, Users, Posts, Post, UserDetails, NotFound } from './pages';
 
 
 function App() {
+
+  console.log('teste');
   return (
     <BlogProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/alkabot">
         <div className="dark:bg-gray-800 min-h-screen">
           <Navbar />
           <Routes>
