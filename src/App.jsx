@@ -8,7 +8,7 @@ import { Home, Users, Posts, Post, UserDetails, NotFound } from './pages';
 function App() {
   return (
     <BlogProvider>
-      <BrowserRouter basename="/alkabot">
+      <BrowserRouter>
         <div className="dark:bg-gray-800 min-h-screen">
           <Navbar />
           <Routes>
