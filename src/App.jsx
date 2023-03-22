@@ -10,7 +10,7 @@ function App() {
   console.log('teste');
   return (
     <BlogProvider>
-      <BrowserRouter basename="/alkabot">
+      <BrowserRouter >
         <div className="dark:bg-gray-800 min-h-screen">
           <Navbar />
           <Routes>
