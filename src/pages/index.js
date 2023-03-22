@@ -3,6 +3,7 @@ import Users from './Users';
 import Posts from './Posts';
 import Post from './Post';
 import UserDetails from './UserDetails';
+import NotFound from './NotFound';
 
 
 export {
@@ -11,4 +12,5 @@ export {
     Posts,
     Post,
     UserDetails,
+    NotFound
 };
