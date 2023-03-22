@@ -6,10 +6,10 @@ function UserCard({ name, userName, email, id }) {
   return (
     <div className="rounded-lg shadow-md dark:shadow-gray-700 p-6">
       <div className="flex items-center mb-6">
-        <FaUser className="text-green-500 dark:text-slate-200 text-3xl mr-4" />
+        <FaUser className="text-green-500 dark:text-green-500 text-3xl mr-4" />
         <div>
           <Link to={`/user/${id}`}>
-            <h2 className="text-2xl font-medium dark:text-slate-100">{name}</h2>
+            <h2 className="text-2xl font-medium dark:text-orange-400">{name}</h2>
           </Link>
           <p className="text-gray-500">{userName}</p>
         </div>

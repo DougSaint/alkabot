@@ -10,8 +10,10 @@ export default function Navbar() {
   const handleChangeTheme = () => {
     if(darkMode === 'light'){
       setDarkMode('dark');
+      localStorage.setItem('darkmode', 'dark')
     }else{
       setDarkMode('light')
+      localStorage.setItem('darkmode', 'light')
     }
   }
   return (

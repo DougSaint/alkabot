@@ -9,7 +9,7 @@ function PostResponseCard({ body, email, name }) {
         <p className="ml-2 text-gray-500 dark:text-gray-300 italic">{email}</p>
       </div>
       <div className="mt-2">
-          <h4 className="font-semibold dark:text-gray-200">{name}</h4>
+          <h4 className="font-semibold text-orange-600 dark:text-orange-400">{name}</h4>
           <i className="dark:text-slate-400">{body}</i>
       </div>
     </div>

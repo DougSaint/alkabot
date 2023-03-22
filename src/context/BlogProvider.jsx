@@ -19,6 +19,12 @@ function BlogProvider({ children }) {
       setLoading(false)
     }
     initialFetch();
+    const darkModeStorage = localStorage.getItem('darkmode');
+    if(darkModeStorage){
+      setDarkMode(darkModeStorage)
+    }else{
+      localStorage.setItem('darkmode', darkMode)
+    }
   },[])
 
 
