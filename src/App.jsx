@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Navbar } from "./components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BlogProvider from "./context/BlogProvider.jsx";
 import { Home, Users, Posts, Post, UserDetails } from './pages';
 
+
 function App() {
   return (
     <BlogProvider>
       <BrowserRouter>
-        <div className="App">
+        <div className="dark:bg-gray-800">
           <Navbar />
           <Routes>
             <Route path="/" element = {<Home />} />

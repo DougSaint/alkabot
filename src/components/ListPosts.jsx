@@ -14,7 +14,19 @@ export default function ListPosts({ page }) {
     if (!posts) {
       setLoading(true);
     }
+
+    
+
+    
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
 
   return (
     <section className="mt-5">
@@ -23,27 +35,31 @@ export default function ListPosts({ page }) {
           <Loader />
         </div>
       )}
-      {!posts && <p>Algo deu errado</p>}
+      {!posts && (
+        <p className="text-slate-800 dark:text-white text-xl text-center">
+          Algo deu errado
+        </p>
+      )}
       {showPosts?.map((post) => (
         <PostCard {...post} key={post.title} />
       ))}
-      <div className="border-t-4 border-t-[#e6eqbf4] w-full flex items-center justify-around">
+      <div className="border-t-2 border-t-[#e6eqbf4] w-full flex items-center justify-around">
         {page > 0 && (
           <Link
             to={`/posts/${+page - 1}`}
-            className="my-5 bg-orange-400 rounded-full"
+            className="my-5 bg-orange-400 dark:bg-orange-800 rounded-full"
           >
             {" "}
-            <BiLeftArrowCircle fill="#FFF" size="2em" />{" "}
+            <BiLeftArrowCircle fill="#FFF" size="2em" onClick={() => scrollToTop() }/>{" "}
           </Link>
         )}
         {page < 9 && (
           <Link
             to={`/posts/${+page + 1}`}
-            className="my-5 bg-orange-400 rounded-full"
+            className="my-5 bg-orange-400 dark:bg-orange-800 rounded-full"
           >
             {" "}
-            <BiRightArrowCircle fill="#FFF" size="2em" />{" "}
+            <BiRightArrowCircle fill="#FFF" size="2em" onClick={() => scrollToTop()} />{" "}
           </Link>
         )}
       </div>

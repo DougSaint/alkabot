@@ -7,8 +7,10 @@ function BlogProvider({ children }) {
   const [ posts, setPosts ] = useState(null);
   const [users, setUsers] = useState(null)
   const [loading, setLoading] = useState(false);
+  const [ darkMode, setDarkMode ] = useState("light");
 
   useEffect(() => {
+    
     const initialFetch = async () => {
       const savedPosts = await fetchAllPosts();
       const savedUsers = await fetchAllUsers();
@@ -19,8 +21,16 @@ function BlogProvider({ children }) {
     initialFetch();
   },[])
 
+
+  if (darkMode === 'dark') {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+
+
   return (
-    <BlogContext.Provider value={ { posts, users, loading, setLoading, } }>
+    <BlogContext.Provider value={ { posts, users, loading, setLoading, setDarkMode, darkMode } }>
       {children}
     </BlogContext.Provider>
   );
