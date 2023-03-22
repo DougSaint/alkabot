@@ -19,7 +19,7 @@ function App() {
             <Route path="/post/:id" element = {<Post />} />
             <Route path="/users" element = {<Users />} />
             <Route path="/user/:id" element = {<UserDetails />} />
-            <Route path ="/*" element = {<NotFound />} />
+            <Route element = {<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>
